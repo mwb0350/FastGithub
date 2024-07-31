@@ -1,38 +1,48 @@
 github加速神器，解决github打不开、用户头像无法加载、releases无法上传下载、git-clone、git-pull、git-push失败等问题。
 
 原仓库 https://github.com/dotnetcore/fastgithub 已经没有了，所以在此做了备份。
+
 1 写在前面
 fastgithub不具备“翻墙”功能,也没有相关的计划
 fastgithub不支持Windows7等已被发行方停止支持的操作系统，并且也不会主动提供支持
 fastgithub不能为您的游戏加速
 fastgithub没有主动在github之外的任何渠道发布
+
 2 部署方式
+
 2.1 windows-x64桌面
 双击运行FastGithub.UI.exe
+
 2.2 windows-x64服务
 fastgithub.exe start // 以windows服务安装并启动
 fastgithub.exe stop // 以windows服务卸载并删除
+
 2.3 linux-x64终端
 sudo ./fastgithub
 设置系统自动代理为http://127.0.0.1:38457，或手动代理http/https为127.0.0.1:38457
+
 2.4 linux-x64服务
 sudo ./fastgithub start // 以systemd服务安装并启动
 sudo ./fastgithub stop // 以systemd服务卸载并删除
 设置系统自动代理为http://127.0.0.1:38457，或手动代理http/https为127.0.0.1:38457
+
 2.5 macOS-x64
 双击运行fastgithub
 安装cacert/fastgithub.cer并设置信任
 设置系统自动代理为http://127.0.0.1:38457，或手动代理http/https为127.0.0.1:38457
 具体配置详情
+
 2.6 docker-compose一键部署
 准备好docker 18.09, docker-compose.
 在源码目录下，有一个docker-compose.yaml 文件，专用于在实际项目中，临时使用github.com源码，而做的demo配置。
 根据自己的需要更新docker-compose.yaml中的sample和build镜像即可完成拉github.com源码加速，并基于源码做后续的操作。
+
 3 软件功能
 提供域名的纯净IP解析；
 提供IP测速并选择最快的IP；
 提供域名的tls连接自定义配置；
 google的CDN资源替换，解决大量国外网站无法加载js和css的问题；
+
 4 证书验证
 4.1 git
 git操作提示SSL certificate problem
